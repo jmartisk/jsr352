@@ -27,6 +27,10 @@ public final class Step extends InheritableJobElement implements PropertiesHolde
     Chunk chunk;
     Partition partition;
 
+    public Step() {
+        super(null);
+    }
+
     Step(final String id) {
         super(id);
     }
@@ -124,7 +128,7 @@ public final class Step extends InheritableJobElement implements PropertiesHolde
      *
      * @param batchlet the step's batchlet {@code RefArtifact}
      */
-    void setBatchlet(final RefArtifact batchlet) {
+    public void setBatchlet(final RefArtifact batchlet) {
         this.batchlet = batchlet;
     }
 
