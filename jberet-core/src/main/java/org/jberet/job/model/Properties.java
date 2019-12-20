@@ -27,9 +27,13 @@ public final class Properties extends MergeableElement implements Serializable, 
      */
     private String partition;
 
-    private final Map<String, String> nameValues = new LinkedHashMap<String, String>();
+    private Map<String, String> nameValues = new LinkedHashMap<String, String>();
 
-    Properties() {
+    public Properties() {
+    }
+
+    public Map<String, String> getNameValues() {
+        return nameValues;
     }
 
     /**

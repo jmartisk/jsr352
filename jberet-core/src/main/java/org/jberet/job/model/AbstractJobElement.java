@@ -27,7 +27,7 @@ import java.util.List;
 abstract class AbstractJobElement implements JobElement, Serializable {
     private static final long serialVersionUID = -8396145727646776440L;
 
-    final String id;
+    String id;
     private Properties properties;
 
     /**
@@ -41,8 +41,12 @@ abstract class AbstractJobElement implements JobElement, Serializable {
     }
 
     @Override
-    public final String getId() {
+    public String getId() {
         return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     @Override

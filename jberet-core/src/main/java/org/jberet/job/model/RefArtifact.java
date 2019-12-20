@@ -37,6 +37,9 @@ public class RefArtifact implements Serializable, Cloneable, PropertiesHolder {
     private Properties properties;
     private Script script;
 
+    public RefArtifact() {
+    }
+
     RefArtifact(final String ref) {
         this.ref = ref == null ? "" : ref;
     }
@@ -55,7 +58,7 @@ public class RefArtifact implements Serializable, Cloneable, PropertiesHolder {
      *
      * @param ref the ref value for this batch artifact
      */
-    void setRef(final String ref) {
+    public void setRef(String ref) {
         this.ref = ref;
     }
 

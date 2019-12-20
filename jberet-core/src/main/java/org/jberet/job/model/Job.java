@@ -48,6 +48,10 @@ public final class Job extends InheritableJobElement implements Serializable, Pr
      */
     final List<InheritableJobElement> inheritingJobElements = new ArrayList<InheritableJobElement>();
 
+    public Job() {
+        super(null);
+    }
+
     Job(final String id) {
         super(id);
     }
@@ -140,7 +144,7 @@ public final class Job extends InheritableJobElement implements Serializable, Pr
 
     @Override
     public List<Transition> getTransitionElements() {
-        throw new IllegalStateException();
+        return null;
     }
 
     @Override
